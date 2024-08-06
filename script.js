@@ -43,6 +43,13 @@ document.addEventListener("mousemove", function(event) {
   Input.mouse.x = event.clientX;
   Input.mouse.y = event.clientY;
 });
+
+//mobile phone users
+document.addEventListener("touchstart", function(event) {
+  Input.mouse.x = event.touches[0].clientX;
+  Input.mouse.y = event.touches[0].clientY;
+});
+
 //Sets up canvas
 var canvas = document.createElement("canvas");
 document.body.appendChild(canvas);
